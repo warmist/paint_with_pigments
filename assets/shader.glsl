@@ -104,14 +104,14 @@ vec3 sample_pixel(vec2 pos,float t)
 	for(float l=380;l<=730;l+=10)
 	{
 		float w_sum=0;
-		float x_mean=1;
+		float x_mean=0;
 		for(int i=0;i<5;i++)
 		{
-			if(w[i]>0.0000001)
-			{
+			//if(w[i]>0.0000001)
+			//{
 				x_mean+=log(sample_pigment(l,i))*w[i];
 				w_sum+=w[i];
-			}
+			//}
 		}
 		if(w_sum>0.00000001)
 		{
